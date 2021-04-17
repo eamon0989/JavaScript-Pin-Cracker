@@ -26,13 +26,22 @@
 	display: none;
 }
 
-#showmd5 {
+#showmd5,
+#onlyHash {
 	display: none;
 }
 
 #onlyFour,
 #noSymbols {
 	display: none;
+}
+
+// #marginTop {
+// 	margin-top: 1.5rem;
+// }
+
+.section {
+	padding: 3rem 0rem;
 }
 
 // 4. Import the rest of Bulma

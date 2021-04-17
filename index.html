@@ -11,18 +11,32 @@
 	</head>
 
 	<body>
-		<section class="section is-centered">
-			<div class="container" , id="container">
+		<section class="section is-centered" id="container">
+			<div class="container">
 				<div class="columns">
 					<div class="column is-8-desktop is-offset-2-desktop">
 						<div>
-							<h1 class="has-text-centered notification is-primary">md5 pin hasher:</h1>
+              <section class="section is-centered">
+              <div class="hero is-primary">
+                <div class="hero-body has-text-centered">
+                <p class="title">
+                  Md5 pin hasher
+                </p>
+                <p class="subtitle">
+                  Convert any 4 digit pin to it's md5 hash
+                </p>
+              </div>
+              </div>
+              </section>
+              <div class="is-centered">
+
+							<!-- <h1 class="title has-text-centered notification is-primary">md5 pin hasher:</h1> -->
 							<div class="field">
-								<p class="has-text-centered label" id="topP">Write any 4 digit pin here: (Only letters and numbers).</p>
+								<p class="label" id="topP">Write pin here:</p>
 								<div class="control">
 									<div class="field">
 										<p class="control has-icons-left">
-											<input class="input" id="insertPin" type="text" name="md5hash" placeholder="Write your 4 digit pin here" />
+											<input class="input" id="insertPin" type="text" name="md5hash" placeholder="Write your 4 digit pin here (numbers and letters only)" />
 											<span class="icon is-small is-left">
 												<i class="fas fa-lock"></i>
 											</span>
@@ -33,26 +47,50 @@
 									</div>
 								</div>
 							</div>
-							<p class="has-text-centered" id="onlyFour">Please type a pin composed of only 4 numbers and/or letters.</p>
-							<p class="has-text-centered" id="noSymbols">No symbols are allowed, Javascript is too slow to process them :(</p>
+            </div>
+              <section class="section is-centered">
+                <!-- <div class="is-centered"> -->
+
+							<p class="has-text-centered notification" id="onlyFour">Please type a pin composed of only 4 numbers and/or letters.</p>
+							<p class="has-text-centered notification" id="noSymbols">No symbols are allowed, Javascript is too slow to process them :(</p>
 						</div>
+            </div>
 					</div>
 				</div>
 			</div>
+    </section>
 		</section>
 
 		<section id="container2" class="section">
 			<div class="container is-max-desktop">
 				<div class="columns">
 					<div class="column is-8-desktop is-offset-2-desktop">
-						<p class="has-text-centered" id="showHash"></p>
-						<p class="has-text-centered notification is-primary" id="instructions">
-							Copy and paste this hash into the following box. It will check the hashes of the numbers 0000 to 9999 to see which matches
+            <section class="section is-centered">
+              
+              <div class="hero is-primary">
+                <div class="hero-body has-text-centered">
+                <p class="title">
+                  Md5 cracker
+                </p>
+                <p class="subtitle">
+                  Brute force your md5 hash back to it's original pin
+                </p>
+              </div>
+              </div>
+</section>
+
+              <div class="is-centered">
+                <p id="marginTop" class="has-text-centered notification" id="instructions">
+							Copy and paste this hash into the following box.  It will check the hashes of the numbers 0000 to 9999 to see which matches
 							your pin.
-							<br /><br />
+
 							Numbers only will solve in less than 2 seconds. More complex pins including letters may take up to 50 seconds, please be
 							patient.
 						</p>
+            <p class="has-text-centered notification" id="showHash"></p>
+          </div>
+          <section class="section is-centered">
+
             <div class="control has-text-centered">
               <div class="field returnPin">
 						<!-- <form class="has-text-centered returnPin"> -->
@@ -61,26 +99,45 @@
 
               <button class="button is-primary" id="submitHash" onclick="codecracker()" type="button">Crack MD5</button>
 						<!-- </form> -->
-						<p class="has-text-centered" id="onlyHash">Please paste in the hash from above.</p>
+						<p class="has-text-centered notification" id="onlyHash">Please paste in the hash from above.</p>
+          </div>
 				</div>
 			</div>
-		</section>
+    </section>
 
-		<section id="showmd5", class="section">
+
+		<section id="showmd5" class="section">
 			<div class="container is-max-desktop">
         <div class="columns">
 					<div class="column is-8-desktop is-offset-2-desktop">
-				<div class="has-text-centered" id="showmd5Center">
+            <section class="section is-centered">
+              <div class="hero is-primary">
+                <div class="hero-body has-text-centered">
+                <p class="title">
+                  Md5 to pin
+                </p>
+                <p class="subtitle">
+                  See the results of the brute force crack
+                </p>
+              </div>
+              </div>
+              </section>
+            <!-- <section class="section"> -->
+				<div class="has-text-centered notification" id="showmd5Center">
 					<p class="has-text-centered" id="hashWas"></p>
 					<p class="has-text-centered" id="hashesChecked"></p>
 					<p class="has-text-centered" id="output"></p>
 					<p class="has-text-centered" id="timeTaken"></p>
+        </div>
+
+        <!-- </section> -->
           <div class="field has-text-centered">
 					<div class="control has-text-centered" id="resetBtnDiv">
+
 						<button class="has-text-centered button is-primary" id="reset" onclick="reset()" type="button">Reset</button>
 					</div>
         </div>
-				</div>
+
 			</div>
     </div>
   </div>
